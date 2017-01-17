@@ -58,6 +58,7 @@
 							contentType: false,
 							processData: false,
 							success: function(data) {
+								console.log(data);
 								$("#progress").hide();
 								$("#form").fadeOut(100);
 								setTimeout(function() {

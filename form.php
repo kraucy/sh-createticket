@@ -88,20 +88,20 @@ foreach($_POST as $key => $value){
 $create = json_encode(array(
 	'ticket' => array(
 		'subject' => $arr['z_subject'],
+    "tags" => ['Freemium'],
 		'comment' => array(
 		"value" => $arr['z_description'],
 		'uploads' => $token
-		), 
+		),
 		'requester' => array(
-			'name' => $arr['z_name'], 
+			'name' => $arr['z_name'],
 			'email' => $arr['z_requester']
 			)
 		)
 	)
 );
 
-
- $ticket = json_encode($create);
- $return = curlWrap("/tickets.json", $create);
+  $ticket = json_encode($create);
+  $return = curlWrap("/tickets.json", $create);
 
  ?>
